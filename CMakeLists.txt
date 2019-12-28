@@ -19,7 +19,7 @@ else ()
     link_directories (${LIBPNG_LIBRARY_DIRS})
     link_libraries (${LIBPNG_LIBRARIES})
 endif ()
-add_executable(coursework coursework.cpp Game.cpp Utility.cpp Block.cpp Scene.cpp Button.cpp Level.cpp)
+add_executable(coursework coursework.cpp Game.cpp Utility.cpp Block.cpp Scene.cpp Button.cpp Level.cpp Control.cpp)
 
 target_link_libraries(coursework ${OPENGL_gl_LIBRARY}  ${GLUT_LIBRARIES} )
 set(CMAKE_CXX_FLAGS "-I ${CMAKE_OSX_SYSROOT} ${CMAKE_CXX_FLAGS} -std=c++11")

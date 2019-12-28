@@ -4,6 +4,7 @@
 #include "GlobalDefinitions.h"
 #include "Utility.h"
 #include "Block.h"
+#include "Control.h"
 #include "Level.h"
 #include <cmath>
 
@@ -12,7 +13,8 @@ enum STATE
     MAINMENU = 0,
     LEVELMENU = 1,
     GAME = 2,
-    GAMEOVER = 3
+    GAMEOVER = 3,
+    CONTROL = 4
 };
 
 class Game
@@ -41,6 +43,7 @@ private:
 private:
     Block* block;
     Level* level;
+    Control* control;
     std::vector<Button*> buttons;
     Button* restartButton;
 

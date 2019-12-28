@@ -1,0 +1,42 @@
+[
+{
+  "directory": "/Users/stephen/Documents/Warwick/cs324/3d_tetris",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/usr/local/Cellar/libpng/1.6.37/include/libpng16  -Wno-deprecated-declarations -I /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk  -std=c++11 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -std=c++11 -o CMakeFiles/coursework.dir/coursework.cpp.o -c /Users/stephen/Documents/Warwick/cs324/3d_tetris/coursework.cpp",
+  "file": "/Users/stephen/Documents/Warwick/cs324/3d_tetris/coursework.cpp"
+},
+{
+  "directory": "/Users/stephen/Documents/Warwick/cs324/3d_tetris",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/usr/local/Cellar/libpng/1.6.37/include/libpng16  -Wno-deprecated-declarations -I /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk  -std=c++11 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -std=c++11 -o CMakeFiles/coursework.dir/Game.cpp.o -c /Users/stephen/Documents/Warwick/cs324/3d_tetris/Game.cpp",
+  "file": "/Users/stephen/Documents/Warwick/cs324/3d_tetris/Game.cpp"
+},
+{
+  "directory": "/Users/stephen/Documents/Warwick/cs324/3d_tetris",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/usr/local/Cellar/libpng/1.6.37/include/libpng16  -Wno-deprecated-declarations -I /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk  -std=c++11 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -std=c++11 -o CMakeFiles/coursework.dir/Utility.cpp.o -c /Users/stephen/Documents/Warwick/cs324/3d_tetris/Utility.cpp",
+  "file": "/Users/stephen/Documents/Warwick/cs324/3d_tetris/Utility.cpp"
+},
+{
+  "directory": "/Users/stephen/Documents/Warwick/cs324/3d_tetris",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/usr/local/Cellar/libpng/1.6.37/include/libpng16  -Wno-deprecated-declarations -I /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk  -std=c++11 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -std=c++11 -o CMakeFiles/coursework.dir/Block.cpp.o -c /Users/stephen/Documents/Warwick/cs324/3d_tetris/Block.cpp",
+  "file": "/Users/stephen/Documents/Warwick/cs324/3d_tetris/Block.cpp"
+},
+{
+  "directory": "/Users/stephen/Documents/Warwick/cs324/3d_tetris",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/usr/local/Cellar/libpng/1.6.37/include/libpng16  -Wno-deprecated-declarations -I /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk  -std=c++11 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -std=c++11 -o CMakeFiles/coursework.dir/Scene.cpp.o -c /Users/stephen/Documents/Warwick/cs324/3d_tetris/Scene.cpp",
+  "file": "/Users/stephen/Documents/Warwick/cs324/3d_tetris/Scene.cpp"
+},
+{
+  "directory": "/Users/stephen/Documents/Warwick/cs324/3d_tetris",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/usr/local/Cellar/libpng/1.6.37/include/libpng16  -Wno-deprecated-declarations -I /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk  -std=c++11 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -std=c++11 -o CMakeFiles/coursework.dir/Button.cpp.o -c /Users/stephen/Documents/Warwick/cs324/3d_tetris/Button.cpp",
+  "file": "/Users/stephen/Documents/Warwick/cs324/3d_tetris/Button.cpp"
+},
+{
+  "directory": "/Users/stephen/Documents/Warwick/cs324/3d_tetris",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/usr/local/Cellar/libpng/1.6.37/include/libpng16  -Wno-deprecated-declarations -I /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk  -std=c++11 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -std=c++11 -o CMakeFiles/coursework.dir/Level.cpp.o -c /Users/stephen/Documents/Warwick/cs324/3d_tetris/Level.cpp",
+  "file": "/Users/stephen/Documents/Warwick/cs324/3d_tetris/Level.cpp"
+},
+{
+  "directory": "/Users/stephen/Documents/Warwick/cs324/3d_tetris",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/usr/local/Cellar/libpng/1.6.37/include/libpng16  -Wno-deprecated-declarations -I /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk  -std=c++11 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -std=c++11 -o CMakeFiles/coursework.dir/Control.cpp.o -c /Users/stephen/Documents/Warwick/cs324/3d_tetris/Control.cpp",
+  "file": "/Users/stephen/Documents/Warwick/cs324/3d_tetris/Control.cpp"
+}
+]

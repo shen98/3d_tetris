@@ -15,6 +15,7 @@ Game::Game()
     block = new Block();
     block->init();
     level = new Level();
+    control = new Control();
 }
 
 Game::~Game() {}
@@ -39,10 +40,12 @@ bool Game::init()
     /*glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);*/
 
 	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    Button* button = new Button(SCREEN_WIDTH / 3.0, SCREEN_HEIGHT * 4 / 6.0,SCREEN_WIDTH / 3.0,SCREEN_HEIGHT / 6.0, "Start");
+    Button* button = new Button(SCREEN_WIDTH / 3.0, SCREEN_HEIGHT * 5 / 7.0,SCREEN_WIDTH / 3.0,SCREEN_HEIGHT / 7.0, "Start");
     buttons.push_back(button);
-    Button* levelButton = new Button(SCREEN_WIDTH / 3.0, SCREEN_HEIGHT * 2 / 6.0,SCREEN_WIDTH / 3.0,SCREEN_HEIGHT / 6.0, "Level");
+    Button* levelButton = new Button(SCREEN_WIDTH / 3.0, SCREEN_HEIGHT * 3 / 7.0,SCREEN_WIDTH / 3.0,SCREEN_HEIGHT / 7.0, "Level");
     buttons.push_back(levelButton);
+    Button* controlButton = new Button(SCREEN_WIDTH / 3.0, SCREEN_HEIGHT / 7.0,SCREEN_WIDTH / 3.0,SCREEN_HEIGHT / 7.0, "Control");
+    buttons.push_back(controlButton);
 
     restartButton = new Button(SCREEN_WIDTH / 3.0, SCREEN_HEIGHT / 6.0, SCREEN_WIDTH / 3.0f, SCREEN_HEIGHT / 6.0f, "Restart");
 }
@@ -141,8 +144,9 @@ void Game::handleMouse(int button, int state, int x, int y)
             if(this->gameState == MAINMENU) {
                 for(int i = 0; i < buttons.size(); ++i) {
                     if(buttons[i]->checkClicked(x, SCREEN_HEIGHT - y)) {
-                        if(i == 0) { this->gameState = GAME; block->init(); return; }
-                        else if(i == 1) { this->gameState = LEVELMENU; return; }
+                        if(i == 0) { this->gameState = GAME; block->init(); }
+                        else if(i == 1) { this->gameState = LEVELMENU; }
+                        else if(i == 2) { this->gameState = CONTROL; }
                     }
                 }
             } else if(this->gameState == LEVELMENU) {
@@ -154,6 +158,8 @@ void Game::handleMouse(int button, int state, int x, int y)
                 }
             } else if(this->gameState == GAMEOVER) {
                 if(restartButton->checkClicked(x, SCREEN_HEIGHT - y)) this->gameState = MAINMENU;
+            } else if(this->gameState == CONTROL) {
+                if(control->returnButtonClicked(x, SCREEN_HEIGHT - y)) this->gameState = MAINMENU;
             }
         }
     }
@@ -235,6 +241,10 @@ void Game::render()
         drawText(SCREEN_WIDTH / 6.0, SCREEN_HEIGHT * 3 / 4.0, 0.5f, 0.5f, "Game Over"); 
         drawText(SCREEN_WIDTH / 6.0, SCREEN_HEIGHT * 2 / 4.0, 0.5f, 0.5f, "Your score is: " + std::to_string(block->getScore()));
         restartButton->draw();
+    }
+    else if(this->gameState == CONTROL)
+    {
+        control->drawControlPage(); 
     }
     glutSwapBuffers();
 }

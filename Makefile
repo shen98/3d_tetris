@@ -177,6 +177,33 @@ Button.cpp.s:
 	$(MAKE) -f CMakeFiles/coursework.dir/build.make CMakeFiles/coursework.dir/Button.cpp.s
 .PHONY : Button.cpp.s
 
+Control.o: Control.cpp.o
+
+.PHONY : Control.o
+
+# target to build an object file
+Control.cpp.o:
+	$(MAKE) -f CMakeFiles/coursework.dir/build.make CMakeFiles/coursework.dir/Control.cpp.o
+.PHONY : Control.cpp.o
+
+Control.i: Control.cpp.i
+
+.PHONY : Control.i
+
+# target to preprocess a source file
+Control.cpp.i:
+	$(MAKE) -f CMakeFiles/coursework.dir/build.make CMakeFiles/coursework.dir/Control.cpp.i
+.PHONY : Control.cpp.i
+
+Control.s: Control.cpp.s
+
+.PHONY : Control.s
+
+# target to generate assembly for a file
+Control.cpp.s:
+	$(MAKE) -f CMakeFiles/coursework.dir/build.make CMakeFiles/coursework.dir/Control.cpp.s
+.PHONY : Control.cpp.s
+
 Game.o: Game.cpp.o
 
 .PHONY : Game.o
@@ -327,6 +354,9 @@ help:
 	@echo "... Button.o"
 	@echo "... Button.i"
 	@echo "... Button.s"
+	@echo "... Control.o"
+	@echo "... Control.i"
+	@echo "... Control.s"
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"
