@@ -7,6 +7,7 @@ Block::Block()
 {
 
     this->speedLevel = 0;
+    initBlocks(); 
 }
 
 Block::~Block() {}
@@ -22,7 +23,6 @@ void Block::init()
     this->gameState = true;
     scene = new Scene();
 
-    initBlocks(); 
 }
 
 void Block::generateBlock()
@@ -32,7 +32,6 @@ void Block::generateBlock()
     this->posZ = 0.0f;
     this->posY = startHeight;
     blockType = rand() % blocks.size();
-    blockType = 1;
     blockID = glGenLists(1);
     glNewList(blockID, GL_COMPILE);
         for(auto p : blocks[blockType].points)

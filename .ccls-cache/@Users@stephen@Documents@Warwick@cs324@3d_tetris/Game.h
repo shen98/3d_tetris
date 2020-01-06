@@ -2,7 +2,6 @@
 #define _Game_H_
 
 #include "GlobalDefinitions.h"
-#include "cCamera.h"
 #include "Utility.h"
 #include "Block.h"
 #include "Control.h"
