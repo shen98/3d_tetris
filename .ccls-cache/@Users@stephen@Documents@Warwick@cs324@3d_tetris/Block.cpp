@@ -32,7 +32,9 @@ void Block::generateBlock()
     this->posZ = 0.0f;
     this->posY = startHeight;
     blockType = rand() % blocks.size();
+    blockType = 5;
     blockID = glGenLists(1);
+    
     glNewList(blockID, GL_COMPILE);
         for(auto p : blocks[blockType].points)
         {
@@ -95,18 +97,18 @@ void Block::move()
 void Block::draw()
 {
     glPushMatrix();
-    glTranslatef(this->posX, this->posY, this->posZ);
-    glRotatef(rotateAngle, 0.0f, 1.0f, 0.0f);
-    glCallList(blockID);
-    glPopMatrix();
-
-    glPushMatrix();
         scene->drawScene();
     glPopMatrix();
 
     glPushMatrix();
-        drawText(200, 100, 0.25, 0.25, "Score:" + std::to_string(scene->getScore()));
-        drawText(10, 500, 0.25, 0.25, "Level:" + std::to_string(this->speedLevel + 1));
+        glTranslatef(this->posX, this->posY, this->posZ);
+        glRotatef(rotateAngle, 0.0f, 1.0f, 0.0f);
+        glCallList(blockID);
+    glPopMatrix();
+
+    glPushMatrix();
+        drawText(10, 500, 0.25, 0.25, "Score:" + std::to_string(scene->getScore()));
+        drawText(10, 550, 0.25, 0.25, "Level:" + std::to_string(this->speedLevel + 1));
     glPopMatrix();
     /*glDisable(GL_TEXTURE_2D); //added this*/
     //glMatrixMode(GL_PROJECTION);
@@ -296,5 +298,25 @@ void Block::initBlocks()
 
     vec = {{1, 0, 0}, {2, 0, 0}, {0, -1, 0}, {1, -1, 0}};
     blocks.push_back(BlockDesc(vec, 3, 2, {0.0f, 0.0f, 1.0f, 1.0f}));
+    
+
+    vec = {{-1, 0, 0}, {0, 0, 0}, {1, 0, 0}, {2, 0, 0}};
+    blocks.push_back(BlockDesc(vec, 4, 1, {0.0f, 1.0f, 1.0f, 1.0f}));
+ 
+    vec = {{-1, 0, 0}, {0, 0, 0}, {1, 0, 0}, {1, -1, 0}};
+    blocks.push_back(BlockDesc(vec, 3, 2, {1.0f, 0.0f, 1.0f, 1.0f}));
+       
 }
 
+void Block::drawBlock()
+{
+    std::cout << this->posZ << std::endl;
+    for(auto p : blocks[blockType].points)
+    {
+        glPushMatrix();
+            glTranslatef(p[0] * blockSize + this->posX, p[1] * blockHeight + this->posY, this->posZ);
+            makeCube(blockSize, blockHeight, blocks[blockType].color);
+        glPopMatrix();
+    }
+       
+}

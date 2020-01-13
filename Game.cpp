@@ -31,7 +31,6 @@ bool Game::init()
 
 /*    glEnable(GL_LIGHTING);*/
     //glEnable(GL_LIGHT0);
-    //glEnable(GL_DEPTH_TEST);
     //glEnable(GL_LIGHT1);
     //glEnable(GL_COLOR_MATERIAL);
     /*glEnable(GL_NORMALIZE);*/
@@ -196,6 +195,8 @@ void Game::render()
         
     if(gameState == GAME)
     {
+
+    glEnable(GL_DEPTH_TEST);
    /*     GLfloat ambientColor[] = {0.2f, 0.2f, 0.2f, 1.0f}; //Color (0.2, 0.2, 0.2)*/
 		//glLightModelfv(GL_LIGHT_MODEL_AMBIENT, ambientColor);
 		
@@ -228,22 +229,26 @@ void Game::render()
     } 
     else if(gameState == MAINMENU)
     {
+        glDisable(GL_DEPTH_TEST);
         for(auto button : buttons)
             button->draw();
 
     }
     else if(gameState == LEVELMENU)
     {
+        glDisable(GL_DEPTH_TEST);
         level->draw();
     }
     else if(this->gameState == GAMEOVER)
     {
+        glDisable(GL_DEPTH_TEST);
         drawText(SCREEN_WIDTH / 6.0, SCREEN_HEIGHT * 3 / 4.0, 0.5f, 0.5f, "Game Over"); 
         drawText(SCREEN_WIDTH / 6.0, SCREEN_HEIGHT * 2 / 4.0, 0.5f, 0.5f, "Your score is: " + std::to_string(block->getScore()));
         restartButton->draw();
     }
     else if(this->gameState == CONTROL)
     {
+        glDisable(GL_DEPTH_TEST);
         control->drawControlPage(); 
     }
     glutSwapBuffers();

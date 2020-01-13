@@ -51,7 +51,7 @@ void makeCube(float cubeSize, float cubeHeight, std::vector<float> color)
         {2, 3, 6, 7}   // top
     };
     glPushMatrix();
-    glColor4f(color[0], color[1], color[2], color[3]);    
+    glColor4f(color[0], color[1], color[2], 1.0f);    
     glBegin(GL_QUADS);
         for (size_t f=0;f<6;f++) // for each face
         for (size_t v=0;v<4;v++) 

@@ -21,6 +21,6 @@ float startHeight = blockSizeHeight * blockHeight;
     
 float bgColor[] = {0.2f, 0.58f, 0.79f, 0.7f};
 
-std::vector<std::vector<float>> blockColor = {{1.0f, 0.0f, 0.0f, 1.0f}, {1.0f, 1.0f, 0.0f, 1.0f}, {0.0f, 1.0f, 0.0f, 1.0f}, {0.0f, 0.0f, 1.0f, 1.0f}};
+std::vector<std::vector<float>> blockColor = {{1.0f, 0.0f, 0.0f, 1.0f}, {1.0f, 1.0f, 0.0f, 1.0f}, {0.0f, 1.0f, 0.0f, 1.0f}, {0.0f, 0.0f, 1.0f, 1.0f}, {0.0f, 1.0f, 1.0f, 1.0f}, {1.0f, 0.0f, 1.0f}};
 
 #endif

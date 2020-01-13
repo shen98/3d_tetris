@@ -23,13 +23,6 @@ struct BlockDesc {
         points(points), width(width), height(height), color(color) {}
 };
 
-/*struct BlockInfo {*/
-    //int posX, posZ, num;
-
-    //BlockInfo(int posX, int posZ, int num) :
-        //posX(posX), posZ(posZ), num(num) {}
-/*};*/
-
 class Block
 {
 public:
@@ -60,6 +53,7 @@ private:
     int converterY(float val, int extra = 0);
     BlockDesc getCurBlockInfo();
 
+    void drawBlock();
 private:
     float rotateAngle;
     float posX, posY, posZ;
