@@ -18,7 +18,13 @@ Game::Game()
     control = new Control();
 }
 
-Game::~Game() {}
+Game::~Game() 
+{
+    delete block;
+    delete level;
+    delete control;
+    delete restartButton;
+}
 
 bool Game::init()
 {	

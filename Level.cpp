@@ -13,7 +13,11 @@ Level::Level()
     levelButtons.push_back(level4);
 }
 
-Level::~Level() {}
+Level::~Level() 
+{
+    for(auto b : levelButtons)
+        delete b;
+}
 
 void Level::draw()
 {

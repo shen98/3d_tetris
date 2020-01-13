@@ -10,7 +10,10 @@ Block::Block()
     initBlocks(); 
 }
 
-Block::~Block() {}
+Block::~Block() 
+{
+    delete scene;
+}
 
 void Block::init()
 {

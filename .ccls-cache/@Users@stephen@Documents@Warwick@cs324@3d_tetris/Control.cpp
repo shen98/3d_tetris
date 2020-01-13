@@ -6,7 +6,10 @@ Control::Control()
 {
 }
 
-Control::~Control() {}
+Control::~Control() 
+{
+    delete returnButton;
+}
 
 void Control::drawControlPage()
 {
