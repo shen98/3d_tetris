@@ -23,7 +23,7 @@ public:
     Game();
     virtual ~Game();
 
-    bool init();
+    void init();
     bool loop();
 
     void handleKeyboard(unsigned char key, int x, int y, bool press);

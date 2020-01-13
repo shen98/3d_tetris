@@ -13,6 +13,10 @@ void Button::draw()
     drawButton();
 }
 
+void Button::deleteButton()
+{
+    delete this;
+}
 void Button::drawButton()
 {
 

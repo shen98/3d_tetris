@@ -26,7 +26,7 @@ Game::~Game()
     delete restartButton;
 }
 
-bool Game::init()
+void Game::init()
 {	
     glClearColor(bgColor[0], bgColor[1], bgColor[2], bgColor[3]);
     glMatrixMode(GL_PROJECTION);

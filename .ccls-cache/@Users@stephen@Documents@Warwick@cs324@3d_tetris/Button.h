@@ -11,6 +11,8 @@ public:
     
     void draw();
     bool checkClicked(float posX, float posY);
+
+    void deleteButton();
 private:
     void drawButton();
     bool test(float posX, float posY);
